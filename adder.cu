@@ -36,7 +36,7 @@ int main(void)
 
     // Define threads/blocks
     int threads = 256;
-    int blocks = (N + threads - 1) / threads;
+    int blocks = (N + threads - 1) / threads;//ceiling function
 
     // Launch kernel (THIS is the GPU launch)
     add << <blocks, threads >> > (d_x, d_y, d_sum, N);
