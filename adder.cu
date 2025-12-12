@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
 #include <math.h>
 // Kernel function to add the elements of two arrays
 __global__ void add(float* x, float* y, float* sum, int N) {
